@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Context API</a>
         </h1>
 
         <p className={styles.description}>
@@ -30,7 +30,7 @@ export default function Home() {
             </a>
           </Link>
 
-          <Link as="a" href="/context/redux">
+          <Link href="/context/redux">
             <a className={styles.card}>
               <h2>Context useReducer &rarr;</h2>
               <p>Use Context API with useReducer</p>

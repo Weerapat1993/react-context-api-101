@@ -1,4 +1,5 @@
 import axios from "axios";
+import { FetchFailure, FetchRequest, FetchSuccess } from "../../@types/interface";
 import {
   FETCH_POST_BY_ID_FAILURE,
   FETCH_POST_BY_ID_REQUEST,
@@ -9,16 +10,16 @@ export const increment = () => ({ type: "increment" });
 export const decrement = () => ({ type: "decrement" });
 export const reset = () => ({ type: "reset" });
 
-export const fetchPostByUserIdRequest = ({ key }) => ({
+export const fetchPostByUserIdRequest = ({ key }: FetchRequest) => ({
   type: FETCH_POST_BY_ID_REQUEST,
   key,
 });
-export const fetchPostByUserIdSuccess = ({ data, key }) => ({
+export const fetchPostByUserIdSuccess = ({ data, key }: FetchSuccess) => ({
   type: FETCH_POST_BY_ID_SUCCESS,
   key,
   data,
 });
-export const fetchPostByUserIdFailure = ({ error, key }) => ({
+export const fetchPostByUserIdFailure = ({ error, key }: FetchFailure) => ({
   type: FETCH_POST_BY_ID_FAILURE,
   key,
   error,
